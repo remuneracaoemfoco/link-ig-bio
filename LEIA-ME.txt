@@ -9,3 +9,5 @@ noindex enquanto for teste (remover o bloco headers ao publicar).
 Vercel: Framework Preset "Other", sem build, Root Directory "./".
 Domínios (Settings > Domains): adicionar bio1, bio2 e bio3 no MESMO projeto e criar no DNS
 um CNAME de cada um para o valor que a Vercel indicar (normalmente cname.vercel-dns.com).
+
+Teste de deploy automatico (11/11/2026): commit feito por Danilo para validar GitHub > Vercel.
