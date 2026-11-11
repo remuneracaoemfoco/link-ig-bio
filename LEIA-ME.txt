@@ -1,0 +1,11 @@
+Repositório de teste: 3 modelos de link da bio (Elisa Amorim - Remuneração em Foco)
+  classico/   -> bio1.remuneracaoemfoco.com.br  (clone original, 05/11)
+  contraste/  -> bio2.remuneracaoemfoco.com.br  (clone V2 com contraste e ícones de redes)
+  fotos/      -> bio3.remuneracaoemfoco.com.br  (V2 inspirada na Mari, fotos da Elisa)
+vercel.json: cada host bioN.* serve a raiz do seu modelo (rewrite, URL fica limpa);
+os caminhos /classico/, /contraste/ e /fotos/ continuam abrindo no .vercel.app;
+raiz do .vercel.app mostra /fotos/. trailingSlash mantém img/ relativo funcionando.
+noindex enquanto for teste (remover o bloco headers ao publicar).
+Vercel: Framework Preset "Other", sem build, Root Directory "./".
+Domínios (Settings > Domains): adicionar bio1, bio2 e bio3 no MESMO projeto e criar no DNS
+um CNAME de cada um para o valor que a Vercel indicar (normalmente cname.vercel-dns.com).
