@@ -58,31 +58,30 @@
   }
   .card.rev picture{right:auto;left:0;width:46%}
   .card.rev .ph{-webkit-mask-image:linear-gradient(to left,transparent 0%,#000 42%);mask-image:linear-gradient(to left,transparent 0%,#000 42%)}
-  /* Foto deslocada para a direita, com a Elisa no centro da área da imagem */
-  /* YouTube: foto mais alta, sem respiro no topo, mais corpo à mostra */
-  .card .ph[src$="elisa-31.webp"]{object-position:50% 62%}
-  /* BH Rewards Day: Elisa_81, com fundo dos dois lados; o degradê azul começa em 50% do cartão */
-  .card.foco picture{width:50%}
-  .card.foco .ph{object-position:50% 63%;-webkit-mask-image:linear-gradient(to right,transparent 0%,#000 28%);mask-image:linear-gradient(to right,transparent 0%,#000 28%)}
+  /* Formação (elisa-86): rosto à esquerda da foto, enquadrado um pouco mais acima */
+  .card .ph[src$="elisa-86.webp"]{object-position:50% 30%}
   .txt{position:relative;z-index:1;height:100%;width:58%;padding:22px 0 22px 22px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:10px}
   .card.rev .txt{margin-left:auto;width:56%;padding:22px 22px 22px 0}
   .kicker{display:flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
-  .kicker img{width:22px;height:22px;display:block}
+  .kicker img{width:22px;height:22px;display:block;flex:none}
   .card h2{margin:0;font-size:20px;font-weight:800;line-height:1.2}
   .cta{
     display:inline-block;margin-top:4px;padding:10px 18px;border-radius:999px;background:var(--gold);color:var(--navy-deep);
     font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
   }
   .card:hover .cta{background:var(--gold-soft)}
-  /* Destaque (primeiro card) */
+  /* Destaque (primeiro card: Formação) */
   .card.destaque{height:250px;border:2px solid var(--gold)}
   .card.destaque h2{font-size:23px}
+  .card.destaque .kicker{letter-spacing:.08em;line-height:1.3}
+  /* Título longo (lista de espera) */
+  .card h2.longo{font-size:17px;line-height:1.25}
 
   footer{margin-top:30px;font-size:12px;color:rgba(255,253,235,.6);text-align:center}
 
   @media (max-width:380px){
-    .card{height:200px} .card.destaque{height:230px}
-    .card h2{font-size:17px} .card.destaque h2{font-size:20px}
+    .card{height:200px} .card.destaque{height:240px}
+    .card h2{font-size:17px} .card.destaque h2{font-size:20px} .card h2.longo{font-size:15px}
     .txt{padding-left:16px;width:62%} .card.rev .txt{padding-right:16px}
   }
   @media (prefers-reduced-motion:reduce){.card,.social a{transition:none}.card:hover,.social a:hover{transform:none}}
@@ -96,16 +95,24 @@
   <nav class="social" aria-label="Redes sociais">
     <a href="https://www.linkedin.com/in/elisaamorim/" target="_blank" rel="noopener" aria-label="LinkedIn de Elisa Amorim"><img src="img/linkedin.webp" alt=""></a>
     <a href="https://www.instagram.com/remuneracaoemfoco/" target="_blank" rel="noopener" aria-label="Instagram Remuneração em Foco"><img src="img/instagram.webp" alt=""></a>
-    <a href="https://www.youtube.com/@RemuneracaoemFoco" target="_blank" rel="noopener" aria-label="YouTube Remuneração em Foco"><img src="img/youtube.webp" alt=""></a>
     <a href="https://api.whatsapp.com/send?phone=5519981362637" target="_blank" rel="noopener" aria-label="WhatsApp do time"><img src="img/whatsapp.webp" alt=""></a>
   </nav>
 
   <div class="cards">
-    <a class="card destaque" href="https://chat.whatsapp.com/EXcRsBdTyqXEqrSAHOjhyi" target="_blank" rel="noopener">
-      <picture><img class="ph" src="img/elisa-28.webp" alt="" loading="eager"></picture>
+    <a class="card destaque rev" href="https://cargos.remuneracaoemfoco.com.br/fcs-entrada-pg02-of01?utm_source=instagram_org&amp;utm_campaign=VSL_FCS&amp;utm_medium=insta_ELISA_org&amp;utm_content=bio&amp;utm_term=QUENTE_ORG&amp;src=VSL_FCS|insta_ELISA_org|bio|instagram_org|QUENTE_ORG&amp;sck=VSL_FCS|insta_ELISA_org|bio|instagram_org|QUENTE_ORG" target="_blank" rel="noopener">
+      <picture><img class="ph" src="img/elisa-86.webp" alt="" loading="eager"></picture>
+      <div class="txt">
+        <span class="kicker"><img src="img/formacao.svg" alt="">Condição especial por pouco tempo</span>
+        <h2>Formação em Cargos e Salários</h2>
+        <span class="cta">Acessar oportunidade</span>
+      </div>
+    </a>
+
+    <a class="card" href="https://chat.whatsapp.com/EXcRsBdTyqXEqrSAHOjhyi" target="_blank" rel="noopener">
+      <picture><img class="ph" src="img/elisa-28.webp" alt="" loading="lazy"></picture>
       <div class="txt">
         <span class="kicker"><img src="img/lista-espera.webp" alt="">Lista de espera</span>
-        <h2>Lista de espera para cursos</h2>
+        <h2 class="longo">Quer ficar por dentro das próximas turmas e cursos?</h2>
         <span class="cta">Entrar na lista</span>
       </div>
     </a>
@@ -143,24 +150,6 @@
         <span class="kicker"><img src="img/instagram.webp" alt="">Instagram</span>
         <h2>Remuneração em Foco</h2>
         <span class="cta">Seguir</span>
-      </div>
-    </a>
-
-    <a class="card rev" href="https://www.youtube.com/@RemuneracaoemFoco" target="_blank" rel="noopener">
-      <picture><img class="ph" src="img/elisa-31.webp" alt="" loading="lazy"></picture>
-      <div class="txt">
-        <span class="kicker"><img src="img/youtube.webp" alt="">YouTube</span>
-        <h2>Remuneração em Foco</h2>
-        <span class="cta">Assistir</span>
-      </div>
-    </a>
-
-    <a class="card foco" href="https://beneficios.ifood.com.br/acrescenta/artigos/rewards-day-o-futuro-da-remuneracao-total" target="_blank" rel="noopener">
-      <picture><img class="ph" src="img/elisa-81.webp" alt="" loading="lazy"></picture>
-      <div class="txt">
-        <span class="kicker"><img src="img/artigo.webp" alt="">Artigo</span>
-        <h2>Resumo do BH Rewards Day</h2>
-        <span class="cta">Ler resumo</span>
       </div>
     </a>
   </div>
